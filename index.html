@@ -1,39 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product Landing Page</title>
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Product Landing Page</title>
-  <link href="assets/css/style.css" rel="stylesheet" />
-</head>
-
-<body>
-  <header>
-    <nav class="movie-navbar">
-      <ul class="movie-list">
-        <li>
-          <a href="">Now Showing</a>
-        </li>
-        <li>
-          <a href="">Up Next</a>
-        </li>
-        <li>
-          <a href="">Coming Soon</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="landing-container">
-      <div class="landing-left">
-        <h1 class="landing-left-movie-title">Now Showing Title</h1>
-      </div>
-      <div class="landing-right">
-        <h1 class="landing-right-cta">Get tickets</h1>
-      </div>
-    </section>
-  </main>
-</body>
-
+  <body>
+    <header>
+      <nav class="movie-navbar">
+        <ul class="movie-nav-list">
+          <li>
+            <a href="#">Now Showing</a>
+          </li>
+          <li>
+            <a href="#">Up Next</a>
+          </li>
+          <li>
+            <a href="#">Coming Soon</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="now-showing-section movie-section">
+        <div class="movie-section-left">
+          <h1 class="movie-section-left-movie-label">Now Showing</h1>
+          <i class="movie-description">
+            A thriller with many exciting twists, turns, and loop de loops...
+          </i>
+        </div>
+        <section class="movie-section-right">
+          <h1 class="movie-section-right-movie-title">Central Cafe</h1>
+          <section class="movie-section-right-info">
+            <div class="movie-section-cta movie-section-right-info-item">
+              <h2 class="movie-section-right-heading">Find Locations</h2>
+              <button class="" type="button">Get tickets</button>
+            </div>
+            <div class="movie-section-ratings movie-section-right-info-item">
+              <h2 class="movie-section-right-heading">Ratings</h2>
+              <ul>
+                <li>
+                  <p><a href="">Rotten Tomatoes:</a> 94%</p>
+                </li>
+                <li>
+                  <p><a href="">IMDB:</a> 8.9</p>
+                </li>
+                <li><a href="">Metacritic:</a> 84</li>
+              </ul>
+            </div>
+            <div class="movie-reviews movie-section-right-info-item">
+              <h2 class="movie-section-right-heading">Reviews</h2>
+              <i class="movie-reviews-item">
+                "A thrilling ride from start to finish!" — New York Times
+              </i>
+            </div>
+            <div class="movie-trailer movie-section-right-info-item">
+              <h2 class="movie-section-right-heading">Trailer</h2>
+              <!-- <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/8hP9D6kZseM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe> -->
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
+  </body>
 </html>

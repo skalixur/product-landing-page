@@ -7,67 +7,141 @@
 }
 
 body {
-  background-color: #000;
+  background-color: var(--bg-color);
 }
 
-.movie-navbar,
-.movie-list {
+:root {
+  --bg-color: #09080d;
+  --heading-1-font-size: 3em;
+  --small-space: 0.25em;
+  --medium-space: 3em;
+}
+
+.movie-navbar {
+  position: fixed;
   display: flex;
+  padding: 0.5em;
   width: 100%;
-  gap: 2em;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  /* gap: 5em; */
+  background-image: linear-gradient(
+    to bottom,
+    var(--bg-color) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
-.now-showing {
-  justify-self: flex-start;
+.movie-nav-list {
+  padding: 1em;
+  display: flex;
+  flex-flow: row nowrap;
+  /* background-color: ; */
+  border-radius: 8px;
+  backdrop-filter: blur(1rem);
+
+  li {
+    text-align: center;
+    display: inline-block;
+    list-style: none;
+    margin: 0 0.5rem;
+
+    a {
+      transition: all 0.2s;
+      color: grey;
+      text-underline-offset: 0.1rem;
+
+      &:hover {
+        color: white;
+        text-underline-offset: 0.3rem;
+      }
+    }
+  }
 }
 
-.movie-list li {
-  list-style: none;
-}
-
-.landing-container {
+.now-showing-section {
   height: 80vh;
   display: flex;
 }
 
-.landing-left,
-.landing-right {
-  flex: 1 1 auto;
-  width: 50vw;
+.movie-section-left,
+.movie-section-right {
   height: 100%;
 }
 
-.landing-left {
-  background-image: linear-gradient(to left, #000, rgba(0, 0, 0, 0) 50%),
-    linear-gradient(to top, #000, rgba(0, 0, 0, 0) 50%),
+.movie-section-left {
+  width: 65vw;
+  background-image: linear-gradient(
+      to left,
+      var(--bg-color),
+      rgba(0, 0, 0, 0) 50%
+    ),
+    linear-gradient(to top, var(--bg-color), rgba(0, 0, 0, 0) 50%),
     url('../../antonio-costin-IaGm21GKj58-unsplash.jpg');
   background-size: cover;
+  background-position: center center;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 3em;
+  padding: var(--medium-space);
 }
 
-.landing-right {
-  background-color: black;
+.movie-section-right {
+  background-color: var(--bg-color);
 
-  display: flex;
-  justify-content: center;
-  padding: 1em;
+  /* display: flex; */
+  padding: var(--medium-space);
 }
 
-.landing-right-cta {
-  text-align: center;
-  font-size: 5em;
+.movie-section-right-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
-.landing-left-movie-title {
-  font-size: 5em;
+.movie-section-right-info-item {
+  /* border: 2px solid gray;
+  border-radius: 0.5rem; */
+  padding: 1rem;
 }
 
-.landing-movie-image {
+.movie-section-right-heading {
+  margin-bottom: var(--small-space);
+}
+
+.movie-section-right-movie-title {
+  font-size: var(--heading-1-font-size);
+}
+
+.movie-section-left-movie-label {
+  font-size: var(--heading-1-font-size);
+}
+
+.movie-description,
+.movie-reviews-item {
+  color: grey;
+}
+
+.movie-section-movie-image {
   max-height: 100%;
   max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .movie-section-left-movie-label {
+    font-size: 2em;
+  }
+
+  .movie-section-right-movie-title {
+    font-size: 2em;
+  }
+
+  .movie-section-left {
+    width: 100vw;
+  }
+
+  .movie-section {
+    width: 100%;
+    flex-direction: column;
+  }
 }
