@@ -7,14 +7,17 @@
 }
 
 body {
+  min-height: 100vh;
   background-color: var(--bg-color);
 }
 
 :root {
   --bg-color: #09080d;
   --heading-1-font-size: 3em;
-  --small-space: 0.25em;
-  --medium-space: 3em;
+  --tiny-space: 0.25em;
+  --small-space: 1em;
+  --medium-space: 2em;
+  --big-space: 3em;
 }
 
 .movie-navbar {
@@ -32,11 +35,15 @@ body {
   );
 }
 
+.burger-menu {
+  display: none !important;
+  backdrop-filter: blur(1rem);
+}
+
 .movie-nav-list {
-  padding: 1em;
+  padding: var(--small-space);
   display: flex;
   flex-flow: row nowrap;
-  /* background-color: ; */
   border-radius: 8px;
   backdrop-filter: blur(1rem);
 
@@ -47,19 +54,19 @@ body {
     margin: 0 0.5rem;
 
     a {
-      transition: all 0.2s;
+      transition: color 0.2s, text-underline-offset 0.2s;
       color: grey;
-      text-underline-offset: 0.1rem;
+      text-underline-offset: 0.3rem;
 
       &:hover {
         color: white;
-        text-underline-offset: 0.3rem;
+        text-underline-offset: 0.35rem;
       }
     }
   }
 }
 
-.now-showing-section {
+.movie-section {
   height: 80vh;
   display: flex;
 }
@@ -79,24 +86,26 @@ body {
     linear-gradient(to top, var(--bg-color), rgba(0, 0, 0, 0) 50%),
     url('../../antonio-costin-IaGm21GKj58-unsplash.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center center;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: var(--medium-space);
+  padding: var(--big-space);
 }
 
 .movie-section-right {
   background-color: var(--bg-color);
 
   /* display: flex; */
-  padding: var(--medium-space);
+  padding: var(--big-space);
 }
 
 .movie-section-right-info {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  align-items: start;
 }
 
 .movie-section-right-info-item {
@@ -105,8 +114,16 @@ body {
   padding: 1rem;
 }
 
+.movie-section-cta-tickets {
+  display: inline-block; /* ?? */
+  border: none;
+  border-radius: var(--tiny-space);
+  padding: var(--small-space);
+  background: red;
+}
+
 .movie-section-right-heading {
-  margin-bottom: var(--small-space);
+  margin-bottom: var(--tiny-space);
 }
 
 .movie-section-right-movie-title {
@@ -128,6 +145,24 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .movie-navbar {
+    justify-content: flex-end;
+  }
+
+  .burger-menu {
+    display: block !important;
+  }
+
+  .movie-nav-list {
+    display: none;
+  }
+
+  .movie-section {
+    min-height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+  }
+
   .movie-section-left-movie-label {
     font-size: 2em;
   }
@@ -136,12 +171,12 @@ body {
     font-size: 2em;
   }
 
-  .movie-section-left {
-    width: 100vw;
+  .movie-section-right {
+    width: 100%;
   }
 
-  .movie-section {
+  .movie-section-left {
+    min-height: 60vh;
     width: 100%;
-    flex-direction: column;
   }
 }

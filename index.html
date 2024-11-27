@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Product Landing Page</title>
     <link href="assets/css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
@@ -21,6 +28,7 @@
             <a href="#">Coming Soon</a>
           </li>
         </ul>
+        <i class="fa-solid fa-bars burger-menu"></i>
       </nav>
     </header>
     <main>
@@ -36,37 +44,46 @@
           <section class="movie-section-right-info">
             <div class="movie-section-cta movie-section-right-info-item">
               <h2 class="movie-section-right-heading">Find Locations</h2>
-              <button class="" type="button">Get tickets</button>
+              <a class="movie-section-cta-tickets" href="#"> Get tickets </a>
             </div>
             <div class="movie-section-ratings movie-section-right-info-item">
               <h2 class="movie-section-right-heading">Ratings</h2>
               <ul>
                 <li>
-                  <p><a href="">Rotten Tomatoes:</a> 94%</p>
+                  <p>
+                    <a href="https://www.rottentomatoes.com" target="_blank"
+                      >Rotten Tomatoes:</a
+                    >
+                    94%
+                  </p>
                 </li>
                 <li>
-                  <p><a href="">IMDB:</a> 8.9</p>
+                  <p><a href="https://www.imdb.com/">IMDb:</a> 8.9</p>
                 </li>
-                <li><a href="">Metacritic:</a> 84</li>
+                <li>
+                  <a href="https://www.metacritic.com/">Metacritic:</a> 84
+                </li>
               </ul>
+            </div>
+            <div class="movie-trailer movie-section-right-info-item">
+              <h2 class="movie-section-right-heading">Trailer</h2>
+              <iframe
+                height="auto"
+                width="100%"
+                src="https://www.youtube.com/embed/8hP9D6kZseM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                credentialless
+                loading="lazy"
+              ></iframe>
             </div>
             <div class="movie-reviews movie-section-right-info-item">
               <h2 class="movie-section-right-heading">Reviews</h2>
               <i class="movie-reviews-item">
                 "A thrilling ride from start to finish!" — New York Times
               </i>
-            </div>
-            <div class="movie-trailer movie-section-right-info-item">
-              <h2 class="movie-section-right-heading">Trailer</h2>
-              <!-- <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/8hP9D6kZseM"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe> -->
             </div>
           </section>
         </section>
