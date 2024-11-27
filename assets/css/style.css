@@ -114,7 +114,7 @@ body {
 }
 
 .movie-section {
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
 }
 
@@ -183,7 +183,7 @@ body {
 .movie-section-right-info {
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
+  grid-template-rows: 1fr 1fr;
   align-items: start;
 }
 
@@ -245,7 +245,7 @@ body {
 
 @media screen and (max-width: 768px) {
   :root {
-    --heading-1-font-size: 1.5em;
+    --heading-1-font-size: 2em;
   }
 
   .movie-navbar {
