@@ -6,6 +6,10 @@
   color: white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
   background-color: var(--bg-color);
@@ -20,6 +24,10 @@ body {
   --big-space: 3em;
 }
 
+.no-select {
+  user-select: none;
+}
+
 .movie-navbar {
   position: fixed;
   display: flex;
@@ -27,12 +35,6 @@ body {
   width: 100%;
   justify-content: center;
   align-items: flex-end;
-  /* gap: 5em; */
-  background-image: linear-gradient(
-    to bottom,
-    var(--bg-color) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
 }
 
 .burger-menu {
@@ -66,25 +68,68 @@ body {
   }
 }
 
-.movie-section {
-  height: 80vh;
+.learn-more-section {
+  background-image: linear-gradient(to bottom, var(--bg-color), black);
+  padding-bottom: var(--big-space);
+  min-height: 20vh;
   display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: var(--small-space);
+  align-items: center;
+}
+
+.learn-more-section-titles {
+  text-align: center;
+}
+
+.learn-more-form {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--tiny-space);
+}
+
+.location-dropdown,
+.email-input,
+.submit-button {
+  font-size: 1em;
+  padding: calc(var(--small-space));
+  background-color: black;
+  border: 1px solid grey;
+  border-radius: var(--tiny-space);
+  color: white;
+
+  option {
+    color: white;
+  }
+}
+
+.submit-button {
+  cursor: pointer;
+  background-color: red;
+  border: none;
+  font-weight: 500;
+}
+
+.movie-section {
+  min-height: 80vh;
+  display: flex;
+}
+
+.up-next-section {
+  flex-direction: row-reverse;
 }
 
 .movie-section-left,
 .movie-section-right {
-  height: 100%;
+  min-height: 100%;
 }
 
 .movie-section-left {
   width: 65vw;
-  background-image: linear-gradient(
-      to left,
-      var(--bg-color),
-      rgba(0, 0, 0, 0) 50%
-    ),
-    linear-gradient(to top, var(--bg-color), rgba(0, 0, 0, 0) 50%),
-    url('../../antonio-costin-IaGm21GKj58-unsplash.jpg');
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -94,10 +139,44 @@ body {
   padding: var(--big-space);
 }
 
+.now-showing-section .movie-section-left {
+  background-image: linear-gradient(
+      to bottom,
+      var(--bg-color),
+      rgba(0, 0, 0, 0) 10%
+    ),
+    linear-gradient(to left, var(--bg-color), rgba(0, 0, 0, 0) 50%),
+    linear-gradient(to top, var(--bg-color), rgba(0, 0, 0, 0) 50%),
+    url('/assets/img/now-showing.jpg');
+}
+
+.up-next-section .movie-section-left {
+  background-image: linear-gradient(
+      to bottom,
+      var(--bg-color),
+      rgba(0, 0, 0, 0) 10%
+    ),
+    linear-gradient(to right, var(--bg-color), rgba(0, 0, 0, 0) 50%),
+    linear-gradient(to top, var(--bg-color), rgba(0, 0, 0, 0) 50%),
+    url('/assets/img/up-next.jpg');
+
+  text-align: right;
+}
+
+.coming-soon-section .movie-section-left {
+  background-image: linear-gradient(
+      to bottom,
+      var(--bg-color),
+      rgba(0, 0, 0, 0) 10%
+    ),
+    linear-gradient(to left, var(--bg-color), rgba(0, 0, 0, 0) 50%),
+    linear-gradient(to top, var(--bg-color), rgba(0, 0, 0, 0) 50%),
+    url('/assets/img/coming-soon.jpg');
+}
+
 .movie-section-right {
   background-color: var(--bg-color);
 
-  /* display: flex; */
   padding: var(--big-space);
 }
 
@@ -109,8 +188,6 @@ body {
 }
 
 .movie-section-right-info-item {
-  /* border: 2px solid gray;
-  border-radius: 0.5rem; */
   padding: 1rem;
 }
 
@@ -120,6 +197,8 @@ body {
   border-radius: var(--tiny-space);
   padding: var(--small-space);
   background: red;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .movie-section-right-heading {
@@ -135,8 +214,28 @@ body {
 }
 
 .movie-description,
-.movie-reviews-item {
+.movie-reviews-item,
+.movie-reviews-item i,
+.subtitle {
   color: grey;
+}
+
+.subtitle {
+  font-weight: 300;
+}
+
+.movie-ratings-list-item {
+  &:nth-child(1) b {
+    color: lime;
+  }
+
+  &:nth-child(2) b {
+    color: yellow;
+  }
+
+  &:nth-child(3) b {
+    color: yellowgreen;
+  }
 }
 
 .movie-section-movie-image {
@@ -145,6 +244,10 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  :root {
+    --heading-1-font-size: 1.5em;
+  }
+
   .movie-navbar {
     justify-content: flex-end;
   }
@@ -158,25 +261,28 @@ body {
   }
 
   .movie-section {
-    min-height: 100vh;
+    min-height: 100vh; /* im sure theres a better way to do this, but ehh */
     width: 100vw;
     flex-direction: column;
   }
 
-  .movie-section-left-movie-label {
-    font-size: 2em;
-  }
-
-  .movie-section-right-movie-title {
-    font-size: 2em;
-  }
-
   .movie-section-right {
+    min-height: fit-content;
     width: 100%;
   }
 
   .movie-section-left {
-    min-height: 60vh;
+    min-height: 50vh;
+    padding: var(--medium-space);
     width: 100%;
+  }
+
+  .learn-more-form {
+    flex-direction: column;
+  }
+
+  .location-dropdown,
+  .email-input {
+    padding: calc(2 * var(--tiny-space));
   }
 }

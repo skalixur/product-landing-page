@@ -19,20 +19,24 @@
       <nav class="movie-navbar">
         <ul class="movie-nav-list">
           <li>
-            <a href="#">Now Showing</a>
+            <a href="#now-showing">Now Showing</a>
           </li>
           <li>
-            <a href="#">Up Next</a>
+            <a href="#up-next">Up Next</a>
           </li>
           <li>
-            <a href="#">Coming Soon</a>
+            <a href="#coming-soon">Coming Soon</a>
+          </li>
+          <span class="no-select">|</span>
+          <li>
+            <a href="#learn-more">Learn More</a>
           </li>
         </ul>
         <i class="fa-solid fa-bars burger-menu"></i>
       </nav>
     </header>
     <main>
-      <section class="now-showing-section movie-section">
+      <section id="now-showing" class="now-showing-section movie-section">
         <div class="movie-section-left">
           <h1 class="movie-section-left-movie-label">Now Showing</h1>
           <i class="movie-description">
@@ -40,28 +44,31 @@
           </i>
         </div>
         <section class="movie-section-right">
-          <h1 class="movie-section-right-movie-title">Central Cafe</h1>
+          <h1 class="movie-section-right-movie-title">Twisted Fate</h1>
           <section class="movie-section-right-info">
             <div class="movie-section-cta movie-section-right-info-item">
               <h2 class="movie-section-right-heading">Find Locations</h2>
-              <a class="movie-section-cta-tickets" href="#"> Get tickets </a>
+              <a class="movie-section-cta-tickets" href="#learn-more">
+                Get tickets
+              </a>
             </div>
             <div class="movie-section-ratings movie-section-right-info-item">
               <h2 class="movie-section-right-heading">Ratings</h2>
-              <ul>
-                <li>
+              <ul class="movie-ratings-list">
+                <li class="movie-ratings-list-item">
                   <p>
                     <a href="https://www.rottentomatoes.com" target="_blank"
                       >Rotten Tomatoes:</a
                     >
-                    94%
+                    <b>94%</b>
                   </p>
                 </li>
-                <li>
-                  <p><a href="https://www.imdb.com/">IMDb:</a> 8.9</p>
+                <li class="movie-ratings-list-item">
+                  <p><a href="https://www.imdb.com/">IMDb:</a> <b>8.9</b></p>
                 </li>
-                <li>
-                  <a href="https://www.metacritic.com/">Metacritic:</a> 84
+                <li class="movie-ratings-list-item">
+                  <a href="https://www.metacritic.com/">Metacritic:</a>
+                  <b>84</b>
                 </li>
               </ul>
             </div>
@@ -81,12 +88,189 @@
             </div>
             <div class="movie-reviews movie-section-right-info-item">
               <h2 class="movie-section-right-heading">Reviews</h2>
-              <i class="movie-reviews-item">
-                "A thrilling ride from start to finish!" — New York Times
-              </i>
+              <ul class="movie-reviews-list">
+                <li class="movie-reviews-item">
+                  <i
+                    >"An electrifying journey full of suspense!" — Los Angeles
+                    Times</i
+                  >
+                </li>
+                <li class="movie-reviews-item">
+                  <i>"Keeps you guessing at every turn!" — The Guardian</i>
+                </li>
+              </ul>
             </div>
           </section>
         </section>
+      </section>
+
+      <section id="up-next" class="up-next-section movie-section">
+        <div class="movie-section-left">
+          <h1 class="movie-section-left-movie-label">Up Next</h1>
+          <i class="movie-description">
+            A heart-pounding adventure you won't see coming...
+          </i>
+        </div>
+        <section class="movie-section-right">
+          <h1 class="movie-section-right-movie-title">Broken Paths</h1>
+          <section class="movie-section-right-info">
+            <div class="movie-section-cta movie-section-right-info-item">
+              <h2 class="movie-section-right-heading">Find Locations</h2>
+              <a class="movie-section-cta-tickets" href="#learn-more">
+                Get tickets
+              </a>
+            </div>
+            <div class="movie-section-ratings movie-section-right-info-item">
+              <h2 class="movie-section-right-heading">Ratings</h2>
+              <ul class="movie-ratings-list">
+                <li class="movie-ratings-list-item">
+                  <p>
+                    <a href="https://www.rottentomatoes.com" target="_blank"
+                      >Rotten Tomatoes:</a
+                    >
+                    <b>94%</b>
+                  </p>
+                </li>
+                <li class="movie-ratings-list-item">
+                  <p><a href="https://www.imdb.com/">IMDb:</a> <b>8.9</b></p>
+                </li>
+                <li class="movie-ratings-list-item">
+                  <a href="https://www.metacritic.com/">Metacritic:</a>
+                  <b>84</b>
+                </li>
+              </ul>
+            </div>
+            <div class="movie-trailer movie-section-right-info-item">
+              <h2 class="movie-section-right-heading">Trailer</h2>
+              <iframe
+                height="auto"
+                width="100%"
+                src="https://www.youtube.com/embed/8hP9D6kZseM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                credentialless
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="movie-reviews movie-section-right-info-item">
+              <h2 class="movie-section-right-heading">Reviews</h2>
+              <ul class="movie-reviews-list">
+                <li class="movie-reviews-item">
+                  <i
+                    >"An unforgettable tale of love and betrayal." — The
+                    Hollywood Reporter</i
+                  >
+                </li>
+                <li class="movie-reviews-item">
+                  <i
+                    >"A deeply moving story of resilience." — Chicago Tribune</i
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+      </section>
+
+      <section id="coming-soon" class="coming-soon-section movie-section">
+        <div class="movie-section-left">
+          <h1 class="movie-section-left-movie-label">Coming Soon</h1>
+          <i class="movie-description">
+            A gripping tale of love, loss, and redemption...
+          </i>
+        </div>
+        <section class="movie-section-right">
+          <h1 class="movie-section-right-movie-title">Silent Whispers</h1>
+          <section class="movie-section-right-info">
+            <div class="movie-section-cta movie-section-right-info-item">
+              <h2 class="movie-section-right-heading">Interested?</h2>
+              <a class="movie-section-cta-tickets" href="#learn-more"
+                >Learn More</a
+              >
+            </div>
+            <div class="movie-section-ratings movie-section-right-info-item">
+              <h2 class="movie-section-right-heading">Ratings</h2>
+              <ul class="movie-ratings-list">
+                <li class="movie-ratings-list-item">
+                  <p>
+                    <a href="https://www.rottentomatoes.com" target="_blank"
+                      >Rotten Tomatoes:</a
+                    >
+                    <b>94%</b>
+                  </p>
+                </li>
+                <li class="movie-ratings-list-item">
+                  <p><a href="https://www.imdb.com/">IMDb:</a> <b>8.9</b></p>
+                </li>
+                <li class="movie-ratings-list-item">
+                  <a href="https://www.metacritic.com/">Metacritic:</a>
+                  <b>84</b>
+                </li>
+              </ul>
+            </div>
+            <div class="movie-trailer movie-section-right-info-item">
+              <h2 class="movie-section-right-heading">Trailer</h2>
+              <iframe
+                height="auto"
+                width="100%"
+                src="https://www.youtube.com/embed/8hP9D6kZseM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                credentialless
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="movie-reviews movie-section-right-info-item">
+              <h2 class="movie-section-right-heading">Reviews</h2>
+              <ul class="movie-reviews-list">
+                <li class="movie-reviews-item">
+                  <i>"A hauntingly beautiful masterpiece!" — Variety</i>
+                </li>
+                <li class="movie-reviews-item">
+                  <i
+                    >"Captivating and full of unexpected twists." — Empire
+                    Magazine</i
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+      </section>
+
+      <section id="learn-more" class="learn-more-section">
+        <div class="learn-more-section-titles">
+          <h2>Want to learn more?</h2>
+          <h3 class="subtitle">
+            Reserve tickets, and learn about upcoming movies through email
+          </h3>
+        </div>
+        <form action="thankyou.html" class="learn-more-form">
+          <select
+            name="location"
+            id="location-dropdown"
+            class="location-dropdown"
+            required
+          >
+            <option value="" disabled selected>Select a location</option>
+            <option value="SM Megamall">SM Megamall</option>
+            <option value="Ayala Vertis North">Ayala Malls Vertis North</option>
+            <option value="Shangri-la Red Carpet">Shangri-la Red Carpet</option>
+          </select>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="email-input"
+            required
+            placeholder="johndoe@example.com"
+          />
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
       </section>
     </main>
   </body>
