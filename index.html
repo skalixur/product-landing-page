@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Product Landing Page</title>
+    <title>Atlas Cinemas</title>
+    <script src="assets/js/index.js" defer></script>
     <link href="assets/css/style.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -16,7 +17,15 @@
 
   <body>
     <header>
+      <div class="burger-menu"></div>
       <nav class="movie-navbar">
+        <a href="/" class="logo-container">
+          <img
+            src="assets/img/logo-transperant.png"
+            alt="Atlas Cinema Logo"
+            class="logo"
+          />
+        </a>
         <ul class="movie-nav-list">
           <li>
             <a href="#now-showing">Now Showing</a>
@@ -32,7 +41,7 @@
             <a href="#learn-more">Learn More</a>
           </li>
         </ul>
-        <i class="fa-solid fa-bars burger-menu"></i>
+        <i class="fa-solid fa-bars burger-toggle"></i>
       </nav>
     </header>
     <main>
@@ -273,5 +282,7 @@
         </form>
       </section>
     </main>
+
+    <footer>&#169; 2024 Atlas Cinema</footer>
   </body>
 </html>

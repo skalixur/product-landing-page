@@ -24,6 +24,31 @@ body {
   --big-space: 3em;
 }
 
+footer {
+  padding: var(--small-space);
+  background-color: black;
+  color: grey;
+  text-align: center;
+}
+
+.thankyou-footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.thankyou-page-body {
+  background-image: linear-gradient(to bottom, var(--bg-color), black);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.thankyou-info-container {
+  text-align: center;
+}
+
 .no-select {
   user-select: none;
 }
@@ -33,12 +58,24 @@ body {
   display: flex;
   padding: 0.5em;
   width: 100%;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.burger-menu {
-  display: none !important;
+.logo-container {
+  border-radius: 8px;
+  backdrop-filter: blur(1rem);
+  padding: 0 calc(1 / 2 * var(--small-space));
+}
+
+.logo {
+  max-height: 3em;
+  aspect-ratio: 1/1;
+}
+
+.burger-toggle {
+  cursor: pointer;
+  visibility: hidden !important;
   backdrop-filter: blur(1rem);
 }
 
@@ -248,12 +285,8 @@ body {
     --heading-1-font-size: 2em;
   }
 
-  .movie-navbar {
-    justify-content: flex-end;
-  }
-
-  .burger-menu {
-    display: block !important;
+  .burger-toggle {
+    visibility: visible !important;
   }
 
   .movie-nav-list {
